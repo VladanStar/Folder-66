@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sortiranje tri broja</title>
+</head>
+
+<body>
+    <h1>Sortiranje tri broja</h1>
+    <h2>Unesite brojeve po zelji</h2>
+    <h2>Pritisnite dugme kako bi prikazali najmanji broj</h2>
+
+    <input id="unos1" type="number" placeholder="Unesi broj"></br>
+    <input id="unos2" type="number" placeholder="Unesi broj"></br>
+    <input id="unos3" type="number" placeholder="Unesi broj"></br>
+
+    <button onclick="sortiranjeTriBroja()">Sortiraj brojeve</button></br>
+
+    <p id="demo"></p>
+    <script>
+        function sortiranjeTriBroja() {
+            function provera(a, b) {
+                if (a > b) return 1;  // ako je A manje od B, menjamo im mesta
+                return -1;               // inače nista
+            }
+
+            //let broj1, broj2, broj3;
+            let broj1 = parseInt(document.getElementById("unos1").value);
+            let broj2 = parseInt(document.getElementById("unos2").value);
+            let broj3 = parseInt(document.getElementById("unos3").value);
+
+            let niz = [broj1, broj2, broj3];
+            niz.sort(provera);
+            document.getElementById("demo").innerHTML = "Sortirani brojevi su: " + niz;
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

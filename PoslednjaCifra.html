@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Poslednja cifra</title>
+</head>
+
+<body>
+    <h1>Unesite trocifreni broj</h1>
+    <h2>Izracunajte poslednju cifru unetog broja pritiskom na dugme</h2>
+
+    Broj : <input type="number" id="input_a" placeholder="Unesite broj "></br></br>
+
+    Poslednja cifra je: <p id="res">...</p></br></br>
+
+    <button id="demo">Izracunaj poslednju cifru</button></br></br>
+
+    <script>
+        function funkcija(x) {
+            let c = x % 10;
+            document.getElementById("res").innerHTML = c;
+        }
+
+        document.getElementById("demo").addEventListener("click",
+            function () {
+                let x = document.getElementById("input_a").value;
+                funkcija(x);
+            }
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Minimum tri broja</title>
+</head>
+
+<body>
+    <h1>Minimum tri broja</h1>
+    <h2>Unesite brojeve po zelji</h2>
+    <h2>Pritisnite dugme kako bi prikazali najmanji broj</h2>
+
+    <input id="unos1" type="number" placeholder="Unesi broj">
+    <input id="unos2" type="number" placeholder="Unesi broj">
+    <input id="unos3" type="number" placeholder="Unesi broj">
+
+    <button onclick="minimumTriBroja()">Proveri minimum</button>
+
+    <p id="demo"></p>
+    <script>
+        function minimumTriBroja() {
+
+            //let broj1, broj2, broj3;
+            let broj1 = parseInt(document.getElementById("unos1").value);
+            let broj2 = parseInt(document.getElementById("unos2").value);
+            let broj3 = parseInt(document.getElementById("unos3").value);
+
+            let min = broj1;
+            if (broj2 < min)
+                min = broj2;
+            if (broj3 < min)
+                min = broj3;
+
+            document.getElementById("demo").innerHTML = "Najmanji broj je: " + min;
+
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

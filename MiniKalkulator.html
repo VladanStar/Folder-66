@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mini Kalakulator</title>
+
+</head>
+
+<body>
+    <h1>Mini kalkulator</h1>
+    <h2>Unesite dva broja po zelji i izaberite operaciju klikom na dugme</h2>
+
+    <p id="demo"></p>
+
+
+    Broj1: <input id="inputDemo" type="number" placeholder=" Unesi broj1"></br></br>
+    Broj2: <input id="inputDemo1" type="number" placeholder="Unesi broj2"></br></br>
+
+
+
+    <button id="btnS">Sabiranje</button></br></br>
+    <button id="btnO">Oduzimanje</button></br></br>
+    <button id="btnM">Mnozenje</button></br></br>
+    <button id="btnD">Deljenje</button></br></br>
+
+    <script>
+        // sabiranje
+        function funkcija1(a, b) {
+            // ovde moramo da ih konvertujemo jer ih js uzima kao tekstualne podatke
+            // prilikom sabiranja pa ih onda "bukvalno" dodaje jedan na drugi.
+            let vrA = Number(a);
+            /let vrB = Number(b);
+            let c = (vrA + vrB);
+
+            document.getElementById("demo").innerHTML = "Rezultat sabiranja je: " + c;
+        }
+
+        document.getElementById("btnS").addEventListener("click",
+            function () {
+                let x = document.getElementById("inputDemo").value;
+                let y = document.getElementById("inputDemo1").value;
+                funkcija1(x, y);
+            }
+        );
+        // oduzimanje
+        function funkcija2(a, b) {
+            let c = a - b;
+            document.getElementById("demo").innerHTML = "Rezultat oduzimanja je: " + c;
+        }
+
+        document.getElementById("btnO").addEventListener("click",
+            function () {
+                let x = document.getElementById("inputDemo").value;
+                let y = document.getElementById("inputDemo1").value;
+                funkcija2(x, y);
+            }
+        );
+        // mnozenje
+        function funkcija3(a, b) {
+            let c = a * b;
+            document.getElementById("demo").innerHTML = "Rezultat mnozenja je: " + c;
+        }
+
+        document.getElementById("btnM").addEventListener("click",
+            function () {
+                let x = document.getElementById("inputDemo").value;
+                let y = document.getElementById("inputDemo1").value;
+                funkcija3(x, y);
+            }
+        );
+        // deljenje
+        // ovde bi trebalo ispitati da li je b != 0. Jer nije moguce deljenje sa 0. Preko if naredbe. 
+        //Ne bih je sad ubacio ovde jer je jos nismo radili na predavanjima.
+        function funkcija4(a, b) {
+            let c = a / b;
+            document.getElementById("demo").innerHTML = "Rezultat deljenja je: " + c;
+        }
+
+        document.getElementById("btnD").addEventListener("click",
+            function () {
+                let x = document.getElementById("inputDemo").value;
+                let y = document.getElementById("inputDemo1").value;
+                funkcija4(x, y);
+            }
+        );
+        document.getElementById("demo").style.fontSize = '32px';
+        document.getElementById("demo").style.color = "#DC0101";
+
+    </script>
+</body>
+
+</html>

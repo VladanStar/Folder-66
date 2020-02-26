@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>Osnovi programiranja u JavaScript-u</h1>
+    <h2>If - else granjanje</h2>
+
+    <p id="demo"></p></br></br>
+
+    Broj osvojenih bodova: <input id="unos" type="number" placeholder="Unesi broj bodova"></br></br>
+    <button onclick="rezultatiTesta()">Prikazi ocenu</button>
+    <script>
+        function rezultatiTesta() {
+            let bodovi = parseInt(document.getElementById("unos").value);
+            if (bodovi >= 94) {
+                document.getElementById("demo").innerHTML = "Ocena je 10";
+            }
+            else if (bodovi > 85 && bodovi < 94) {
+                document.getElementById("demo").innerHTML = "Ocena je 9";
+            }
+            else if (bodovi > 75 && bodovi <= 85) {
+                document.getElementById("demo").innerHTML = "Ocena je 8";
+            }
+            else if (bodovi > 65 && bodovi <= 75) {
+                document.getElementById("demo").innerHTML = "Ocena je 7";
+            }
+            else if (bodovi > 54 && bodovi <= 65) {
+                document.getElementById("demo").innerHTML = "Ocena je 6";
+            } else {
+                document.getElementById("demo").innerHTML = "Vidimo se u sledecem roku";
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>

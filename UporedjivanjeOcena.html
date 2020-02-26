@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>Osnovi programiranja u JavaScript-u</h1>
+    <h2>Switch</h2>
+
+    <p id="demo"></p></br></br>
+
+    Dobijena ocena(tekst): <input id="unos" type="text" placeholder="Unesi test ocene"></br></br>
+    <button onclick="rezultatiTesta()">Prikazi ocenu</button>
+    <script>
+        function rezultatiTesta() {
+            let ocena = document.getElementById("unos").value;
+
+            switch (ocena) {
+                case 'deset':
+                    document.getElementById("demo").innerHTML = 10;
+                    break;
+                case 'devet':
+                    document.getElementById("demo").innerHTML = 9;
+                    break;
+                case 'osam':
+                    document.getElementById("demo").innerHTML = 8;
+                    break;
+                case 'sedam':
+                    document.getElementById("demo").innerHTML = 7;
+                    break;
+                case 'sest':
+                    document.getElementById("demo").innerHTML = 6;
+                    break;
+                case 'pet':
+                    document.getElementById("demo").innerHTML = 5;
+                    break;
+                default:
+                    document.getElementById("demo").innerHTML = "Greska u unosu";
+                    break;
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
